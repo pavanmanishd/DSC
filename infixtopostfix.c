@@ -6,7 +6,7 @@ char stack[size];
 int tos = -1;
 void push(char op)
 {
-	stack[tos++] = op;
+	stack[++tos] = op;
 }
 int pop()
 {
