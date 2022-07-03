@@ -93,7 +93,7 @@ bool DeleteBeg(ArrayList * al,float * pDel)
 	//copy list[0] elem to pass by reference pDel
 	*pDel = al -> list[0];
 	//shift all elements to left from 1 to size-1
-	for(i = 1;i <= al -> size-1;i--)
+	for(i = 1;i <= al -> size-1;i++)
 		al -> list[i-1] = al -> list[i]; 
 	//decrease size
 	al -> size--;
