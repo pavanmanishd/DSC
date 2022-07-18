@@ -43,7 +43,10 @@ void SelectionSort(int list[],int size)
 	for(pass=1;pass<size;pass++)
 	{
 		maxindex = FindMaxIndex(list,size-pass);
-		Exchange(&list[maxindex] ,&list[size-pass]);
+		if(list[maxindex]!=list[size-pass])
+		{
+			Exchange(&list[maxindex] ,&list[size-pass]);
+		}
 	}
 	return;
 }
