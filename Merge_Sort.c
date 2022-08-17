@@ -24,7 +24,7 @@ void printList(int list[],int size)
 void merge(int a[],int lo,int mid,int hi)
 {
 	int i,j,k;
-	int *temp;
+	int *temp = NULL;
 	temp = (int*)malloc(sizeof(int)*(hi-lo+1));
 	i=lo;
 	j=mid+1;
@@ -39,7 +39,7 @@ void merge(int a[],int lo,int mid,int hi)
 	while(j<=hi)
 		temp[k++] = a[j++];
 	while(i<=mid)
-		temp[k++] = a[j++];
+		temp[k++] = a[i++];
 	for(k=0,i=lo;k<(hi-lo+1);k++,i++)
 		a[i] = temp[k];
 	free(temp);	
@@ -47,7 +47,7 @@ void merge(int a[],int lo,int mid,int hi)
 void MergeSort(int list[],int lo,int hi)
 {
 	int mid;
-	while(lo<hi)
+	if(lo<hi)
 	{
 		mid = (lo+hi)/2;
 		MergeSort(list,lo,mid);
