@@ -26,7 +26,7 @@ int partition(int list[],int lo,int hi)
 	int i,j,pivot,temp;
 	i = lo;
 	j = hi;
-	pivot = list[lo];
+	 pivot = list[lo];
 	while(i<j)
 	{
 		while(list[i]<=pivot)
@@ -43,9 +43,8 @@ int partition(int list[],int lo,int hi)
 			break;
 	}
 	//i crossed j
-	temp = list[j];
-	list[j] = list[i];
-	list[i] = temp;
+	list[lo] = list[j];
+	list[j] = pivot;
 	return j; 
 }
 void QuickSort(int list[],int lo,int hi)
@@ -57,6 +56,8 @@ void QuickSort(int list[],int lo,int hi)
 		QuickSort(list,lo,k-1);
 		QuickSort(list,k+1,hi);
 	}
+	else
+		return;
 }
 int main(void)
 {
