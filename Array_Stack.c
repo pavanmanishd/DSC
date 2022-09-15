@@ -76,6 +76,8 @@ int main(void)
 	bool res;
 	do{
 		printf("\n1.Push\n2.Pop\n3.Peep\n4.Display\n5.Exit");
+                printf("Enter choice :");
+                scanf("%d",&choice);
 		switch(choice)
 		{
 			case 1 : printf("Enter elem to push : ");
