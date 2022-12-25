@@ -117,6 +117,7 @@ bool DeleteAt(ArrayList *al,float * pDel,int pos)
 	int i;
 	//validate position
 	if(pos<0 || pos > al -> size)
+		return false;
 	//validate emptyness
 	if(0 == al -> size)
 		return false;
