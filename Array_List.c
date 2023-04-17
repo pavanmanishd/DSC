@@ -75,7 +75,7 @@ bool InsertAt(ArrayList * al,float elem,int pos)
 	if(al -> size == al -> capacity)
 		return false;
 	//shift elements to right from pos to size-1
-	for(i=al -> size-1;i>=0;i--)
+	for(i=al -> size-1;i>=pos;i--)
 		al -> list[i+1] = al -> list[i];
 	//insert element at position
 	al -> list[pos] = elem;
@@ -117,6 +117,7 @@ bool DeleteAt(ArrayList *al,float * pDel,int pos)
 	int i;
 	//validate position
 	if(pos<0 || pos > al -> size)
+		return false;
 	//validate emptyness
 	if(0 == al -> size)
 		return false;
